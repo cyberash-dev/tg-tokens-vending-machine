@@ -1,9 +1,9 @@
-import type { TokensRepository } from "./domain/Token";
 import type { AllowedUsers } from "./adapters/AllowedUsers";
-import type { TelegramBot } from "./adapters/TelegramBot";
-import type { RandomTokens } from "./adapters/RandomTokens";
 import { InMemoryTokenRepository } from "./adapters/InMemoryTokenRepository";
+import type { RandomTokens } from "./adapters/RandomTokens";
 import { RandomUUIDTokens } from "./adapters/RandomUUIDTokens";
+import type { TelegramBot } from "./adapters/TelegramBot";
+import type { TokensRepository } from "./domain/Token";
 
 export enum TokenStatus {
 	NOT_FOUND = "NOT_FOUND",

@@ -1,10 +1,20 @@
 {
 	"compilerOptions": {
+		"esModuleInterop": true,
 		"baseUrl": ".",
-		"paths": {
-			"@tg-tokens-vending-machine/core": ["./packages/core/src"],
-			"@tg-tokens-vending-machine/core/*": ["./packages/core/src/*"]
-		}
+		"target": "ESNext",
+		"module": "NodeNext",
+		"lib": ["ESNext", "DOM"],
+		"strict": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"isolatedModules": true
 	},
 	"references": [
 		{ "path": "./packages/core" },
