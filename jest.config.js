@@ -9,4 +9,8 @@ module.exports = {
 		"!packages/**/src/index.ts",
 		"!packages/**/src/cli.ts"
 	],
+	moduleNameMapper: {
+		"^@tg-tokens-vending-machine/core$": "<rootDir>/packages/core/src",
+		"^@tg-tokens-vending-machine/core/(.*)$": "<rootDir>/packages/core/src/$1"
+	}
 };

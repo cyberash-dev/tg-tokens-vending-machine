@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@tg-tokens-vending-machine/core": ["./packages/core/src"],
+			"@tg-tokens-vending-machine/core/*": ["./packages/core/src/*"]
+		}
+	},
+	"references": [
+		{ "path": "./packages/core" },
+		{ "path": "./packages/sqlite-tokens-repository" },
+		{ "path": "./packages/telegraf-bot-adapter" }
+	]
+}
