@@ -1,4 +1,4 @@
-# @tg-token-vending-machine/core
+# @tg-tokens-vending-machine/core
 
 Core functionality for the Telegram bot token vending machine. This package contains the main business logic, interfaces, and token management functionality.
 
@@ -13,7 +13,7 @@ Core functionality for the Telegram bot token vending machine. This package cont
 ## 🚀 Installation
 
 ```bash
-npm install @tg-token-vending-machine/core
+npm install @tg-tokens-vending-machine/core
 ```
 
 ## 📖 Usage
@@ -21,7 +21,7 @@ npm install @tg-token-vending-machine/core
 ### Basic Token Vending Machine
 
 ```typescript
-import { TokenVendingMachine, TokenStatus } from '@tg-token-vending-machine/core';
+import { TokenVendingMachine, TokenStatus } from '@tg-tokens-vending-machine/core';
 
 // Create vending machine with your implementations
 const vendingMachine = new TokenVendingMachine(
@@ -52,7 +52,7 @@ The TokenVendingMachine automatically sets up these commands:
 #### TelegramBot Interface
 
 ```typescript
-import type { TelegramBot, BotMessage } from '@tg-token-vending-machine/core';
+import type { TelegramBot, BotMessage } from '@tg-tokens-vending-machine/core';
 
 class MyTelegramBot implements TelegramBot {
   start(handler: (message: BotMessage) => Promise<void>): void {
@@ -72,7 +72,7 @@ class MyTelegramBot implements TelegramBot {
 #### AllowedUsers Interface
 
 ```typescript
-import type { AllowedUsers } from '@tg-token-vending-machine/core';
+import type { AllowedUsers } from '@tg-tokens-vending-machine/core';
 
 class MyAllowedUsers implements AllowedUsers {
   async contains(userId: number): Promise<boolean> {
@@ -85,7 +85,7 @@ class MyAllowedUsers implements AllowedUsers {
 #### TokensRepository Interface
 
 ```typescript
-import type { TokensRepository, Token, NewToken } from '@tg-token-vending-machine/core';
+import type { TokensRepository, Token, NewToken } from '@tg-tokens-vending-machine/core';
 
 class MyTokensRepository implements TokensRepository {
   async newToken(tokenData: NewToken): Promise<Token> {
@@ -113,7 +113,7 @@ class MyTokensRepository implements TokensRepository {
 #### RandomTokens Interface
 
 ```typescript
-import type { RandomTokens } from '@tg-token-vending-machine/core';
+import type { RandomTokens } from '@tg-tokens-vending-machine/core';
 
 class MyRandomTokens implements RandomTokens<string> {
   async next(): Promise<string> {
@@ -178,8 +178,8 @@ new TokenVendingMachine(
 
 ## 🔗 Related Packages
 
-- **[@tg-token-vending-machine/sqlite-tokens-repository](../sqlite-tokens-repository)** - SQLite storage implementation
-- **[@tg-token-vending-machine/telegraf-bot-adapter](../telegraf-bot-adapter)** - Telegraf framework integration
+- **[@tg-tokens-vending-machine/sqlite-tokens-repository](../sqlite-tokens-repository)** - SQLite storage implementation
+- **[@tg-tokens-vending-machine/telegraf-bot-adapter](../telegraf-bot-adapter)** - Telegraf framework integration
 
 ## 📄 License
 

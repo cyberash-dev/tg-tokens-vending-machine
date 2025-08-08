@@ -1,5 +1,5 @@
 {
-  "name": "@tg-token-vending-machine/core",
+  "name": "@tg-tokens-vending-machine/core",
   "version": "1.0.0",
   "description": "Core functionality for Telegram bot token vending machine - handles token lifecycle management and bot interactions",
   "main": "dist/index.js",
@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyberash/tg-token-vending-machine.git",
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine.git",
     "directory": "packages/core"
   },
-  "homepage": "https://github.com/cyberash/tg-token-vending-machine/tree/main/packages/core#readme",
+  "homepage": "https://github.com/cyberash/tg-tokens-vending-machine/tree/main/packages/core#readme",
   "bugs": {
-    "url": "https://github.com/cyberash/tg-token-vending-machine/issues"
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine/issues"
   },
   "publishConfig": {
     "access": "public"

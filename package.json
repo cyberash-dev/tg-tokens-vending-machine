@@ -1,5 +1,5 @@
 {
-  "name": "tg-token-vending-machine",
+  "name": "tg-tokens-vending-machine",
   "version": "1.0.0",
   "private": true,
   "description": "A Telegram bot for dispensing API tokens with SQLite storage and configurable access control",
@@ -26,11 +26,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyberash/tg-token-vending-machine.git"
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine.git"
   },
-  "homepage": "https://github.com/cyberash/tg-token-vending-machine#readme",
+  "homepage": "https://github.com/cyberash/tg-tokens-vending-machine#readme",
   "bugs": {
-    "url": "https://github.com/cyberash/tg-token-vending-machine/issues"
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine/issues"
   },
   "workspaces": [
     "packages/*"

@@ -1,4 +1,4 @@
-import type { MessageHandler, TelegramBot, TelegramMessage } from "@tg-token-vending-machine/core";
+import type { MessageHandler, TelegramBot, TelegramMessage } from "@tg-tokens-vending-machine/core";
 import { Telegraf, type Context } from "telegraf";
 
 export class TelegrafBotAdapter implements TelegramBot {

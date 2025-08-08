@@ -6,9 +6,9 @@ A comprehensive monorepo for managing API token distribution through a Telegram 
 
 This project provides a complete solution for distributing API tokens via a Telegram bot. It consists of three main packages:
 
-- **@tg-token-vending-machine/core** - Core functionality and business logic
-- **@tg-token-vending-machine/sqlite-tokens-repository** - SQLite storage implementation
-- **@tg-token-vending-machine/telegraf-bot-adapter** - Telegraf framework integration
+- **@tg-tokens-vending-machine/core** - Core functionality and business logic
+- **@tg-tokens-vending-machine/sqlite-tokens-repository** - SQLite storage implementation
+- **@tg-tokens-vending-machine/telegraf-bot-adapter** - Telegraf framework integration
 
 ## 🚀 Features
 
@@ -22,7 +22,7 @@ This project provides a complete solution for distributing API tokens via a Tele
 
 ## 📦 Packages
 
-### Core (@tg-token-vending-machine/core)
+### Core (@tg-tokens-vending-machine/core)
 
 The main business logic package containing:
 - Token lifecycle management
@@ -30,14 +30,14 @@ The main business logic package containing:
 - Bot command handlers
 - Token validation logic
 
-### SQLite Repository (@tg-token-vending-machine/sqlite-tokens-repository)
+### SQLite Repository (@tg-tokens-vending-machine/sqlite-tokens-repository)
 
 SQLite-based storage implementation:
 - Persistent token storage
 - CRUD operations for tokens
 - Database migrations and setup
 
-### Telegraf Bot Adapter (@tg-token-vending-machine/telegraf-bot-adapter)
+### Telegraf Bot Adapter (@tg-tokens-vending-machine/telegraf-bot-adapter)
 
 Telegraf framework integration:
 - Bot setup and configuration
@@ -71,9 +71,9 @@ npm test
 ### Basic Setup
 
 ```typescript
-import { TokenVendingMachine } from '@tg-token-vending-machine/core';
-import { SQLiteTokenRepository } from '@tg-token-vending-machine/sqlite-tokens-repository';
-import { TelegrafBotAdapter } from '@tg-token-vending-machine/telegraf-bot-adapter';
+import { TokenVendingMachine } from '@tg-tokens-vending-machine/core';
+import { SQLiteTokenRepository } from '@tg-tokens-vending-machine/sqlite-tokens-repository';
+import { TelegrafBotAdapter } from '@tg-tokens-vending-machine/telegraf-bot-adapter';
 
 // Setup components
 const bot = new TelegrafBotAdapter(process.env.BOT_TOKEN);
@@ -112,7 +112,7 @@ bot.start();
 Implement the `AllowedUsers` interface to control access:
 
 ```typescript
-import type { AllowedUsers } from '@tg-token-vending-machine/core';
+import type { AllowedUsers } from '@tg-tokens-vending-machine/core';
 
 class CustomAllowedUsers implements AllowedUsers {
   async contains(userId: number): Promise<boolean> {

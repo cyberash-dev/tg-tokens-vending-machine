@@ -1,4 +1,4 @@
-import type { NewToken } from "@tg-token-vending-machine/core";
+import type { NewToken } from "@tg-tokens-vending-machine/core";
 import { SQLiteTokenRepository } from "./SQLiteTokenRepository";
 
 describe("SQLiteTokenRepository", () => {

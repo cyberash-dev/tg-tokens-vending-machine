@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 
-import type { NewToken, Token, TokensRepository } from "@tg-token-vending-machine/core";
+import type { NewToken, Token, TokensRepository } from "@tg-tokens-vending-machine/core";
 
 export class SQLiteTokenRepository implements TokensRepository {
 	private db: Database.Database;

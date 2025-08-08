@@ -1,5 +1,5 @@
 {
-  "name": "@tg-token-vending-machine/telegraf-bot-adapter",
+  "name": "@tg-tokens-vending-machine/telegraf-bot-adapter",
   "version": "1.0.0",
   "description": "Telegraf bot adapter for the Telegram token vending machine - connects the core functionality with Telegraf framework",
   "main": "dist/index.js",
@@ -27,23 +27,23 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyberash/tg-token-vending-machine.git",
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine.git",
     "directory": "packages/telegraf-bot-adapter"
   },
-  "homepage": "https://github.com/cyberash/tg-token-vending-machine/tree/main/packages/telegraf-bot-adapter#readme",
+  "homepage": "https://github.com/cyberash/tg-tokens-vending-machine/tree/main/packages/telegraf-bot-adapter#readme",
   "bugs": {
-    "url": "https://github.com/cyberash/tg-token-vending-machine/issues"
+    "url": "https://github.com/cyberash/tg-tokens-vending-machine/issues"
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "@tg-token-vending-machine/core": "^1.0.0",
+    "@tg-tokens-vending-machine/core": "^1.0.0",
     "telegraf": "^4.15.0"
   },
   "devDependencies": {
     "@types/node": "20.11.0",
-    "@tg-token-vending-machine/core": "*",
+    "@tg-tokens-vending-machine/core": "*",
     "telegraf": "^4.15.0",
     "@types/jest": "29.5.12",
     "jest": "29.7.0",
