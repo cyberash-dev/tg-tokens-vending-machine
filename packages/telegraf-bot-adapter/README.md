@@ -1,4 +1,4 @@
-# @tg-token-vending-machine/telegraf-bot-adapter
+# @tg-tokens-vending-machine/telegraf-bot-adapter
 
 Telegraf bot adapter for the Telegram token vending machine. This package provides seamless integration between the core token vending machine functionality and the Telegraf framework for Telegram bots.
 
@@ -14,13 +14,13 @@ Telegraf bot adapter for the Telegram token vending machine. This package provid
 ## 🚀 Installation
 
 ```bash
-npm install @tg-token-vending-machine/telegraf-bot-adapter telegraf
+npm install @tg-tokens-vending-machine/telegraf-bot-adapter telegraf
 ```
 
 ### Peer Dependencies
 
 ```bash
-npm install @tg-token-vending-machine/core telegraf
+npm install @tg-tokens-vending-machine/core telegraf
 ```
 
 ## 📖 Usage
@@ -29,8 +29,8 @@ npm install @tg-token-vending-machine/core telegraf
 
 ```typescript
 import { Telegraf } from 'telegraf';
-import { TelegrafBotAdapter } from '@tg-token-vending-machine/telegraf-bot-adapter';
-import { TokenVendingMachine } from '@tg-token-vending-machine/core';
+import { TelegrafBotAdapter } from '@tg-tokens-vending-machine/telegraf-bot-adapter';
+import { TokenVendingMachine } from '@tg-tokens-vending-machine/core';
 
 // Create Telegraf instance
 const telegraf = new Telegraf(process.env.BOT_TOKEN);
@@ -57,7 +57,7 @@ process.once('SIGTERM', () => telegraf.stop('SIGTERM'));
 
 ```typescript
 import { Telegraf } from 'telegraf';
-import { TelegrafBotAdapter } from '@tg-token-vending-machine/telegraf-bot-adapter';
+import { TelegrafBotAdapter } from '@tg-tokens-vending-machine/telegraf-bot-adapter';
 
 const telegraf = new Telegraf(process.env.BOT_TOKEN);
 
@@ -100,7 +100,7 @@ PORT=3000
 The adapter implements the `TelegramBot` interface from the core package:
 
 ```typescript
-import type { TelegramBot, BotMessage } from '@tg-token-vending-machine/core';
+import type { TelegramBot, BotMessage } from '@tg-tokens-vending-machine/core';
 
 class TelegrafBotAdapter implements TelegramBot {
   constructor(private telegraf: Telegraf) {}
@@ -196,13 +196,13 @@ telegraf.catch((err, ctx) => {
 ```
 ## 🔗 Related Packages
 
-- **[@tg-token-vending-machine/core](../core)** - Core functionality and interfaces
-- **[@tg-token-vending-machine/sqlite-tokens-repository](../sqlite-tokens-repository)** - SQLite storage implementation
+- **[@tg-tokens-vending-machine/core](../core)** - Core functionality and interfaces
+- **[@tg-tokens-vending-machine/sqlite-tokens-repository](../sqlite-tokens-repository)** - SQLite storage implementation
 
 ## 📄 Dependencies
 
 - **telegraf**: Modern Telegram Bot API framework
-- **@tg-token-vending-machine/core**: Core interfaces and types
+- **@tg-tokens-vending-machine/core**: Core interfaces and types
 
 ## 📄 License
 

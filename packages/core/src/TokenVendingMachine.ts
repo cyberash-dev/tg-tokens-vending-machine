@@ -1,6 +1,6 @@
 import type { TokensRepository } from "./domain/Token";
 import type { AllowedUsers } from "./adapters/AllowedUsers";
-import { TelegramBot } from "./adapters/TelegramBot";
+import type { TelegramBot } from "./adapters/TelegramBot";
 import type { RandomTokens } from "./adapters/RandomTokens";
 import { InMemoryTokenRepository } from "./adapters/InMemoryTokenRepository";
 import { RandomUUIDTokens } from "./adapters/RandomUUIDTokens";
@@ -14,7 +14,7 @@ export enum TokenStatus {
 export class TokenVendingMachine {
 	constructor(
 		private readonly telegramBot: TelegramBot,
-        private readonly allowedUsers: AllowedUsers,
+		private readonly allowedUsers: AllowedUsers,
 
 		private readonly tokensRepository: TokensRepository = new InMemoryTokenRepository(),
 		private readonly randomTokens: RandomTokens<string> = new RandomUUIDTokens(),
@@ -40,7 +40,7 @@ export class TokenVendingMachine {
 				return message.reply("You have reached the maximum number of tokens.");
 			}
 
-			if (!await this.allowedUsers.contains(message.fromId)) {
+			if (!(await this.allowedUsers.contains(message.fromId))) {
 				return message.reply("Access denied.");
 			}
 
@@ -64,7 +64,7 @@ export class TokenVendingMachine {
 		});
 
 		this.telegramBot.command("tokens", async (message) => {
-			if (!await this.allowedUsers.contains(message.fromId)) {
+			if (!(await this.allowedUsers.contains(message.fromId))) {
 				return await message.reply("Access denied.");
 			}
 
@@ -99,7 +99,7 @@ export class TokenVendingMachine {
 		});
 
 		this.telegramBot.command("revoke", async (message) => {
-			if (!await this.allowedUsers.contains(message.fromId)) {
+			if (!(await this.allowedUsers.contains(message.fromId))) {
 				return await message.reply("Access denied.");
 			}
 
@@ -120,7 +120,7 @@ export class TokenVendingMachine {
 		});
 
 		this.telegramBot.on("message", async (message) => {
-			if (!await this.allowedUsers.contains(message.fromId)) {
+			if (!(await this.allowedUsers.contains(message.fromId))) {
 				return await message.reply("Access denied.");
 			}
 
@@ -130,8 +130,8 @@ export class TokenVendingMachine {
 		});
 	}
 
-    async tokenStatus(tokenValue: string): Promise<TokenStatus> {
-        const token = await this.tokensRepository.byToken(tokenValue);
+	async tokenStatus(tokenValue: string): Promise<TokenStatus> {
+		const token = await this.tokensRepository.byToken(tokenValue);
 		if (!token) {
 			return TokenStatus.NOT_FOUND;
 		}
@@ -142,5 +142,5 @@ export class TokenVendingMachine {
 		}
 
 		return TokenStatus.VALID;
-    }
+	}
 }

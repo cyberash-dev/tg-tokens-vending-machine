@@ -82,20 +82,12 @@ export class FakeTelegramBot implements TelegramBot {
 	}
 
 	private createMockContext(userId: number, text: string, replies: string[]): TelegramMessage {
-		const message: TelegramMessage = {
-			fromId: userId,
-			text,
-			reply: async (replyText: string) => {
-				replies.push(replyText);
-			},
-		};
-
 		return {
 			fromId: userId,
 			text,
 			reply: async (replyText: string) => {
 				replies.push(replyText);
-			}
+			},
 		};
 	}
 }

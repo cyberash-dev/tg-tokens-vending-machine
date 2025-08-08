@@ -1,5 +1,5 @@
 import type { MessageHandler, TelegramBot, TelegramMessage } from "@tg-tokens-vending-machine/core";
-import { Telegraf, type Context } from "telegraf";
+import type { Context, Telegraf } from "telegraf";
 
 export class TelegrafBotAdapter implements TelegramBot {
 	constructor(private readonly bot: Telegraf) {}
@@ -18,7 +18,7 @@ export class TelegrafBotAdapter implements TelegramBot {
 		});
 	}
 
-	on(event: "message", handler: MessageHandler): void {
+	on(_event: "message", handler: MessageHandler): void {
 		this.bot.on("message", async (ctx: Context) => {
 			const message = this.createTelegramMessage(ctx);
 			await handler(message);
@@ -35,7 +35,7 @@ export class TelegrafBotAdapter implements TelegramBot {
 
 	private createTelegramMessage(ctx: Context): TelegramMessage {
 		const fromId = ctx.from?.id || 0;
-		const text = "text" in ctx.message! ? ctx.message.text || "" : "";
+		const text = ctx.text || "";
 
 		return {
 			fromId,
@@ -46,7 +46,7 @@ export class TelegrafBotAdapter implements TelegramBot {
 				} else {
 					await ctx.reply(replyText);
 				}
-			}
+			},
 		};
 	}
 }

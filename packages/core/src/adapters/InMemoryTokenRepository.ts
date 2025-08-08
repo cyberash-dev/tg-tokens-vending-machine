@@ -1,9 +1,7 @@
-import type { Token, NewToken, TokensRepository } from "../domain/Token";
+import type { NewToken, Token, TokensRepository } from "../domain/Token";
 
 export class InMemoryTokenRepository implements TokensRepository {
 	private tokens = new Map<string, Token>();
-
-	constructor() {}
 
 	async byOwnerId(ownerId: string): Promise<Token[]> {
 		return Array.from(this.tokens.values()).filter((token) => token.ownerId === ownerId);

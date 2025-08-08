@@ -1,6 +1,6 @@
 {
   "name": "@tg-tokens-vending-machine/sqlite-tokens-repository",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "SQLite implementation of the tokens repository interface for the Telegram bot token vending machine",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

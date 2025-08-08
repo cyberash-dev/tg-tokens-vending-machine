@@ -1,6 +1,6 @@
 {
   "name": "@tg-tokens-vending-machine/telegraf-bot-adapter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Telegraf bot adapter for the Telegram token vending machine - connects the core functionality with Telegraf framework",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

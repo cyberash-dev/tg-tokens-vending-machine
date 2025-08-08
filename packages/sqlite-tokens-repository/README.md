@@ -1,4 +1,4 @@
-# @tg-token-vending-machine/sqlite-tokens-repository
+# @tg-tokens-vending-machine/sqlite-tokens-repository
 
 SQLite implementation of the tokens repository interface for the Telegram bot token vending machine. Provides persistent storage for API tokens with full CRUD operations.
 
@@ -14,13 +14,13 @@ SQLite implementation of the tokens repository interface for the Telegram bot to
 ## 🚀 Installation
 
 ```bash
-npm install @tg-token-vending-machine/sqlite-tokens-repository
+npm install @tg-tokens-vending-machine/sqlite-tokens-repository
 ```
 
 ### Peer Dependencies
 
 ```bash
-npm install @tg-token-vending-machine/core
+npm install @tg-tokens-vending-machine/core
 ```
 
 ## 📖 Usage
@@ -28,8 +28,8 @@ npm install @tg-token-vending-machine/core
 ### Basic Usage
 
 ```typescript
-import { SQLiteTokenRepository } from '@tg-token-vending-machine/sqlite-tokens-repository';
-import { TokenVendingMachine } from '@tg-token-vending-machine/core';
+import { SQLiteTokenRepository } from '@tg-tokens-vending-machine/sqlite-tokens-repository';
+import { TokenVendingMachine } from '@tg-tokens-vending-machine/core';
 
 // Create repository with file-based database
 const repository = new SQLiteTokenRepository('./tokens.db');
@@ -48,7 +48,7 @@ const vendingMachine = new TokenVendingMachine(
 ### Manual Repository Operations
 
 ```typescript
-import type { NewToken } from '@tg-token-vending-machine/core';
+import type { NewToken } from '@tg-tokens-vending-machine/core';
 
 // Create a new token
 const newTokenData: NewToken = {
@@ -189,13 +189,13 @@ new SQLiteTokenRepository(':memory:');
 
 ## 🔗 Related Packages
 
-- **[@tg-token-vending-machine/core](../core)** - Core functionality and interfaces
-- **[@tg-token-vending-machine/telegraf-bot-adapter](../telegraf-bot-adapter)** - Telegraf framework integration
+- **[@tg-tokens-vending-machine/core](../core)** - Core functionality and interfaces
+- **[@tg-tokens-vending-machine/telegraf-bot-adapter](../telegraf-bot-adapter)** - Telegraf framework integration
 
 ## 📄 Dependencies
 
 - **better-sqlite3**: Fast, reliable SQLite3 bindings for Node.js
-- **@tg-token-vending-machine/core**: Core interfaces and types
+- **@tg-tokens-vending-machine/core**: Core interfaces and types
 
 ## 📄 License
 

@@ -17,7 +17,7 @@ describe("SQLiteTokenRepository", () => {
 			name: "test",
 			token: "test_token_1",
 			lifeTimeMs: 1000,
-			ownerId: "user123"
+			ownerId: "user123",
 		};
 
 		const token = await repository.newToken(newToken);
@@ -42,7 +42,7 @@ describe("SQLiteTokenRepository", () => {
 			name: "test",
 			token: "test_token_2",
 			lifeTimeMs: 1000,
-			ownerId: "user123"
+			ownerId: "user123",
 		};
 
 		const token = await repository.newToken(newToken);
@@ -58,13 +58,13 @@ describe("SQLiteTokenRepository", () => {
 			name: "test1",
 			token: "test_token_3",
 			lifeTimeMs: 1000,
-			ownerId: "user123"
+			ownerId: "user123",
 		};
 		const newToken2: NewToken = {
 			name: "test2",
 			token: "test_token_4",
 			lifeTimeMs: 2000,
-			ownerId: "user456"
+			ownerId: "user456",
 		};
 
 		const token1 = await repository.newToken(newToken1);
@@ -87,19 +87,19 @@ describe("SQLiteTokenRepository", () => {
 			name: "token1",
 			token: "test_token_5",
 			lifeTimeMs: 1000,
-			ownerId: "user123"
+			ownerId: "user123",
 		};
 		const newToken2: NewToken = {
 			name: "token2",
 			token: "test_token_6",
 			lifeTimeMs: 2000,
-			ownerId: "user123"
+			ownerId: "user123",
 		};
 		const newToken3: NewToken = {
 			name: "token3",
 			token: "test_token_7",
 			lifeTimeMs: 3000,
-			ownerId: "user456"
+			ownerId: "user456",
 		};
 
 		const token1 = await repository.newToken(newToken1);

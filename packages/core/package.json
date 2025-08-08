@@ -1,6 +1,6 @@
 {
   "name": "@tg-tokens-vending-machine/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Core functionality for Telegram bot token vending machine - handles token lifecycle management and bot interactions",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

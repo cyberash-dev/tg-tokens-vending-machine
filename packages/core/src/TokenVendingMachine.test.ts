@@ -30,7 +30,7 @@ describe("TokenVendingMachine", () => {
 			tokensRepository,
 			randomTokens,
 			TOKEN_LIFETIME_MS,
-			MAX_TOKENS_PER_USER
+			MAX_TOKENS_PER_USER,
 		);
 	});
 
@@ -131,7 +131,7 @@ describe("TokenVendingMachine", () => {
 				token: "expired-123",
 				ownerId: ALLOWED_USER_ID.toString(),
 				createdAt: Date.now() - TOKEN_LIFETIME_MS - 1000,
-				lifeTimeMs: TOKEN_LIFETIME_MS
+				lifeTimeMs: TOKEN_LIFETIME_MS,
 			};
 
 			tokensRepository.setToken(expiredToken);
@@ -238,7 +238,7 @@ describe("TokenVendingMachine", () => {
 				token: "valid-123",
 				ownerId: ALLOWED_USER_ID.toString(),
 				createdAt: Date.now(),
-				lifeTimeMs: TOKEN_LIFETIME_MS
+				lifeTimeMs: TOKEN_LIFETIME_MS,
 			};
 
 			tokensRepository.setToken(validToken);
@@ -254,7 +254,7 @@ describe("TokenVendingMachine", () => {
 				token: "expired-123",
 				ownerId: ALLOWED_USER_ID.toString(),
 				createdAt: Date.now() - TOKEN_LIFETIME_MS - 1000,
-				lifeTimeMs: TOKEN_LIFETIME_MS
+				lifeTimeMs: TOKEN_LIFETIME_MS,
 			};
 
 			tokensRepository.setToken(expiredToken);

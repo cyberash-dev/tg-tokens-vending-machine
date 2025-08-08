@@ -3,14 +3,18 @@ export type RandomTokens<T> = {
 };
 
 export class FakeRandomTokens implements RandomTokens<string> {
-	private counter = 0;
+	// biome-ignore lint/correctness/noUnusedPrivateClassMembers: Used in next() method
+	private _counter = 0;
 	private predefinedTokens: string[] = [];
 
 	async next(): Promise<string> {
-		if (this.predefinedTokens.length > 0) {
-			return this.predefinedTokens.shift()!;
+		const token = this.predefinedTokens.shift();
+
+		if (token) {
+			return token;
 		}
-		return `fake-token-${++this.counter}`;
+
+		return `fake-token-${++this._counter}`;
 	}
 
 	setPredefinedTokens(tokens: string[]): void {
@@ -18,7 +22,7 @@ export class FakeRandomTokens implements RandomTokens<string> {
 	}
 
 	reset(): void {
-		this.counter = 0;
+		this._counter = 0;
 		this.predefinedTokens = [];
 	}
 }

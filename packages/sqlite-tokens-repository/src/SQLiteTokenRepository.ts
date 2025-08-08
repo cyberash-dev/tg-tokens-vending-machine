@@ -1,13 +1,11 @@
-import Database from "better-sqlite3";
+import Database = require("better-sqlite3");
 
 import type { NewToken, Token, TokensRepository } from "@tg-tokens-vending-machine/core";
 
 export class SQLiteTokenRepository implements TokensRepository {
 	private db: Database.Database;
 
-	constructor(
-		dbPath: string = "tokens.db",
-	) {
+	constructor(dbPath: string = "tokens.db") {
 		this.db = new Database(dbPath);
 		this.initDatabase();
 	}
