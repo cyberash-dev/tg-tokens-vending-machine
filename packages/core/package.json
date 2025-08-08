@@ -1,50 +1,50 @@
 {
-  "name": "@tg-tokens-vending-machine/core",
-  "version": "0.0.1",
-  "description": "Core functionality for Telegram bot token vending machine - handles token lifecycle management and bot interactions",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist",
-    "test": "jest",
-    "prepublishOnly": "npm run build"
-  },
-  "keywords": [
-    "telegram",
-    "bot",
-    "api",
-    "tokens",
-    "authentication",
-    "typescript",
-    "core"
-  ],
-  "author": "cyberash",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cyberash/tg-tokens-vending-machine.git",
-    "directory": "packages/core"
-  },
-  "homepage": "https://github.com/cyberash/tg-tokens-vending-machine/tree/main/packages/core#readme",
-  "bugs": {
-    "url": "https://github.com/cyberash/tg-tokens-vending-machine/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@types/node": "20.11.0",
-    "@types/jest": "29.5.12",
-    "jest": "29.7.0",
-    "ts-jest": "29.1.2",
-    "typescript": "5.4.5"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "@tg-tokens-vending-machine/core",
+	"version": "0.0.1",
+	"description": "Core functionality for Telegram bot token vending machine - handles token lifecycle management and bot interactions",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist",
+		"test": "jest",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"telegram",
+		"bot",
+		"api",
+		"tokens",
+		"authentication",
+		"typescript",
+		"core"
+	],
+	"author": "cyberash",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cyberash/tg-tokens-vending-machine.git",
+		"directory": "packages/core"
+	},
+	"homepage": "https://github.com/cyberash/tg-tokens-vending-machine/tree/main/packages/core#readme",
+	"bugs": {
+		"url": "https://github.com/cyberash/tg-tokens-vending-machine/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@types/node": "20.11.0",
+		"@types/jest": "29.5.12",
+		"jest": "29.7.0",
+		"ts-jest": "29.1.2",
+		"typescript": "5.4.5"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
 }
