@@ -1,0 +1,58 @@
+{
+  "name": "@tg-token-vending-machine/sqlite-tokens-repository",
+  "version": "1.0.0",
+  "description": "SQLite implementation of the tokens repository interface for the Telegram bot token vending machine",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "sqlite",
+    "repository",
+    "tokens",
+    "database",
+    "storage",
+    "telegram",
+    "bot",
+    "typescript"
+  ],
+  "author": "cyberash",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberash/tg-token-vending-machine.git",
+    "directory": "packages/sqlite-tokens-repository"
+  },
+  "homepage": "https://github.com/cyberash/tg-token-vending-machine/tree/main/packages/sqlite-tokens-repository#readme",
+  "bugs": {
+    "url": "https://github.com/cyberash/tg-token-vending-machine/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@tg-token-vending-machine/core": "^1.0.0"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "7.6.11",
+    "@tg-token-vending-machine/core": "*",
+    "@types/jest": "29.5.12",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.2",
+    "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
